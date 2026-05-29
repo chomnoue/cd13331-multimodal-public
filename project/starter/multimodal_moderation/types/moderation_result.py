@@ -17,6 +17,10 @@ class ModerationResult(BaseModel):
         description="Whether unprofessional tone or content was detected",
         default=False
     )
+    is_flagged: bool = Field(
+        description="Whether any of the any of the moderation flags are True",
+        default=False
+    )
 
 
 class TextModerationResult(ModerationResult):
